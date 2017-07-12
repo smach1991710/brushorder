@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.brush.dao.IAccountDao" >
+
+	<resultMap id="BaseResultMap" type="com.brush.pojo.Account" >
+    	<id column="id" property="id" jdbcType="INTEGER" />
+    	<result column="email" property="email" jdbcType="VARCHAR" />
+    	<result column="pwd" property="pwd" jdbcType="VARCHAR" />
+    	<result column="type" property="type" jdbcType="VARCHAR" />
+    	<result column="buyerId" property="buyerId" jdbcType="VARCHAR" />
+    	<result column="countrycode" property="countrycode" jdbcType="INTEGER" />
+    	<result column="status" property="status" jdbcType="VARCHAR" />
+    	<result column="sysid" property="sysid" jdbcType="INTEGER" />
+    	<result column="ip" property="ip" jdbcType="VARCHAR" />
+    	<result column="creditcard" property="creditcard" jdbcType="VARCHAR" />
+    	<result column="postcode" property="postcode" jdbcType="VARCHAR" />
+    	<result column="buydate" property="buydate" jdbcType="DATE" />
+    	<result column="createdate" property="createdate" jdbcType="DATE" />
+    	<result column="accountmoney" property="accountmoney" jdbcType="FLOAT" />
+    	<result column="vpn" property="vpn" jdbcType="VARCHAR" />
+  	</resultMap>
+  
+	<sql id="Base_Column_List">
+    	id,email,pwd,type,buyerId,countrycode,status,sysid,ip,creditcard,postcode,buydate,createdate,accountmoney,vpn
+  	</sql>
+  
+   	<select id="queryAccount" parameterType="java.util.HashMap"  resultType="com.brush.pojo.Account" >   
+   		SELECT <include refid="Base_Column_List"/>
+   			FROM t_account 
+   				WHERE 1 = 1
+   				<if test="countrycode != null and countrycode != ''">
+	                and countrycode = #{countrycode} 
+	            </if>
+	            <if test="status != null and status != ''">
+	                and status = #{status} 
+	            </if>
+	            <if test="email != null and email != ''">
+	                and email = #{email} 
+	            </if>
+	            <if test="sysid != null and sysid != 0">
+	                and sysid = #{sysid} 
+	            </if>
+	             <if test="type != null and type != ''">
+	                and type = #{type} 
+	            </if>
+	             <if test="ip != null and ip != ''">
+	                and ip = #{ip} 
+	            </if>
+	             <if test="buyerId != null and buyerId != ''">
+	                and buyerId = #{buyerId} 
+	            </if>
+	            
+	               <if test="startbuydate!=null and startbuydate!=''">
+               			 AND buydate &gt;= #{startbuydate}
+            		</if>
+
+		            <!-- 查询条件：创建结束时间 -->
+		            <if test="endbuydate!=null and endbuydate!=''">
+		                AND buydate &lt;= #{endbuydate}
+		            </if>
+	            
+	            <if test="startcreatedate!=null and startcreatedate!=''">
+               			 AND createdate &gt;= #{startcreatedate}
+            		</if>
+
+		            <!-- 查询条件：创建结束时间 -->
+		            <if test="endcreatedate!=null and endcreatedate!=''">
+		                AND createdate &lt;= #{endcreatedate}
+		            </if>
+		        
+		         <if test="from != null and from != 0">
+	             	limit #{from},#{size}
+	            </if>
+   	</select>
+   	
+   	<select id="getAccountCount" parameterType="java.util.HashMap"  resultType="Long" >   
+   		SELECT count(id)
+   			FROM t_account
+   				WHERE 1 = 1
+   				<if test="countrycode != null and countrycode != ''">
+	                and countrycode = #{countrycode} 
+	            </if>
+	            <if test="status != null and status != ''">
+	                and status = #{status} 
+	            </if>
+	            <if test="email != null and email != ''">
+	                and email = #{email} 
+	            </if>
+	            <if test="sysid != null and sysid != 0">
+	                and sysid = #{sysid} 
+	            </if>
+	             <if test="type != null and type != ''">
+	                and type = #{type} 
+	            </if>
+	             <if test="ip != null and ip != ''">
+	                and ip = #{ip} 
+	            </if>
+	             <if test="buyerId != null and buyerId != ''">
+	                and buyerId = #{buyerId} 
+	            </if>
+	               <if test="startbuydate!=null and startbuydate!=''">
+               			 AND buydate &gt;= #{startbuydate}
+            		</if>
+
+		            <!-- 查询条件：创建结束时间 -->
+		            <if test="endbuydate!=null and endbuydate!=''">
+		                AND buydate &lt;= #{endbuydate}
+		            </if>
+	            
+	            <if test="startcreatedate!=null and startcreatedate!=''">
+               			 AND createdate &gt;= #{startcreatedate}
+            		</if>
+
+		            <!-- 查询条件：创建结束时间 -->
+		            <if test="endcreatedate!=null and endcreatedate!=''">
+		                AND createdate &lt;= #{endcreatedate}
+		            </if>
+   	</select>
+   	
+   	<!-- 插入实体 -->
+   	<insert id="save" parameterType="com.brush.pojo.Account" useGeneratedKeys="true" keyProperty="id">
+	    insert into `t_account` (`email`,`pwd`,`type`,`buyerId`,`countrycode`,`status`,`sysid`,`ip`,`creditcard`,`postcode`,`buydate`,`createdate`,`accountmoney`,`vpn`) 
+	    values
+	    (
+			#{email},
+			#{pwd},
+			#{type},
+			#{buyerId},
+			#{countrycode},
+			#{status},
+			#{sysid},
+			#{ip},
+			#{creditcard},
+			#{postcode},
+			#{buydate},
+			#{createdate},
+			#{accountmoney},
+			#{vpn}
+	    )
+	</insert>
+</mapper>

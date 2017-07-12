@@ -1,0 +1,827 @@
+/*
+html
+{
+  min-height:100%;
+}
+*/
+body {
+  padding: 0px;
+  height:100%;
+  font-size: 12px;
+  font-family:"微软雅黑";
+	color: #676a6c;
+}
+
+/*login page*/
+.login-box-warp {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DEDEDE #DEDEDE #DEDEDE;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    width: 300px;
+    padding: 20px 30px;
+}
+
+.login-box {
+    color: #666;
+    width: 260px;
+}
+
+.login-box .field {
+    margin-top: 20px;
+    position: relative;
+}
+
+.login-box .field label {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: #FFF;
+    background: #1ab394 none repeat scroll 0% 0%;
+    text-align: center;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    outline: 0px none;
+}
+
+.login-box .field label img {
+    vertical-align: middle;
+}
+
+.login-box .login-text {
+    width: 208px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 40px;
+    vertical-align: middle;
+    border: 1px solid #DEDEDE;
+}
+
+.login-box .pwd-field label {
+    background-position: 50% -30px;
+}
+
+.login-box .submit {
+    margin-top: 13px;
+}
+
+.login-box .submit button {
+    width: 80%;
+    height: 37px;
+    border: 0px none;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFF;
+    background: #1ab394 none repeat scroll 0% 0%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+button, input, select, textarea {
+    font: 100% Tahoma, Helvetica, Arial, sans-serif;
+}
+
+
+form {
+  margin: 0px;
+  padding: 0px;
+  height:100%;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #EB8A3D;
+  text-decoration: none;
+}
+a:active {
+  color: #EB8A3D;
+  text-decoration: none;
+}
+.clear {
+  clear: both;
+  float: none;
+  font-size: 0px;
+  margin: 0;
+  padding: 0;
+  display:block;
+}
+.nowrap {
+  white-space:nowrap;
+}
+
+/*
+表格CSS定义
+*/
+table.List
+{
+	width:100%;
+	border:1px #DDDDDD solid;
+	border-collapse: separate;
+	border-spacing: 0px;
+	margin-top:2px;
+}
+table.List th
+{
+	border-right:1px #DDDDDD solid;
+	border-bottom:1px #DDDDDD solid;
+	padding-left:1px;
+}
+table.List td
+{
+	border-right:1px #DDDDDD solid;
+	border-bottom:1px #DDDDDD solid;
+	padding-left:1px;
+}
+table.List td input {
+    border: 0px;
+}
+/*默认行高*/
+table.List tr
+{
+	height:33px;
+}
+table.List thead tr
+{
+	height:36px;
+	text-align:center;
+	font-weight: bold;
+	background-color: #F5F5F6;
+}
+
+table.List tfoot tr
+{
+	height:36px;
+	text-align:left;
+	vertical-align: middle;
+	background-color: #F5F5F6;
+}
+
+table.List tfoot *
+{
+	vertical-align: middle;
+}
+
+table.List tfoot img
+{
+	margin-left:5px;
+	border:0px;
+}
+
+table.List tfoot span
+{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+table.List tfoot select
+{
+	margin-left:5px;
+	width:50px;
+}
+
+table.List tfoot input
+{
+	margin-left:5px;
+	width:50px;
+}
+
+/*列表奇偶行和选择行颜色控制 begin*/
+table.List tr.even
+{
+	background-color:#FFFFFF;
+}
+
+table.List tr.odd
+{
+	background-color:#ecf0f1;
+}
+
+table.List tr.selected
+{
+	background-color:#bdc3c7;
+}
+/*列表奇偶行和选择行颜色控制 End*/
+
+table.List td.list_number,table.List td.num
+{
+	text-align:right;
+}
+
+/** 
+* 表体列默认风格
+*/
+table.List td.autohh
+{
+	word-wrap:break-word;
+	word-break:break-all;
+}
+
+table.List tbody tr td
+{
+	text-align:left;
+}
+
+table.List td.list_checkbox
+{
+	text-align:center;
+}
+
+table.List td.list_date,table.List td.date
+{
+	text-align:center;
+}
+
+table.List td.ht-center
+{
+	text-align:center;
+}
+
+table.List td.desc 
+{
+    background: url("../image/desc.png") no-repeat scroll center top transparent;
+}
+table.List td.asc 
+{
+    background: url("../image/asc.png") no-repeat scroll center top transparent;
+}
+
+table.List tbody img 
+{
+	vertical-align: middle;
+	width:16px;
+	height:16px;
+}
+/** 表格CSS定义结束 */
+
+/*
+查询页面过滤条件部分CSS定义
+*/
+table.filter
+{
+	width:1060px;
+}
+
+table.filter td.label
+{
+	width:80px;
+}
+
+table.filter td.filter
+{
+	width:186px;
+}
+
+input[type='button'],input[type='submit']
+{
+	width:80px;
+	height:30px;
+	border:0 px;
+	vertical-align:middle;
+	color:#FFF;
+	background-color: #1ab394;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+input.btnpay
+{
+	background-color: #e74c3c;
+}
+
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled
+{
+	background:#DDDDDD;
+}
+
+input
+{
+	border-radius: 3px;
+    padding: 0px 1px;
+    vertical-align: middle;
+	height:26px;
+    border: 1px solid #DEDEDE
+}
+
+/*register page*/
+.Edit input
+{
+	width: 250px;
+	height: 35px;
+	line-height: 35px;
+}
+
+table .Edit tr
+{
+	height:50px;
+}
+
+.required
+{
+	color:red;
+}
+
+textarea
+{
+    padding: 2px 3px;
+	border-radius: 3px;
+    border: 1px solid #DEDEDE
+}
+
+input[type='file']
+{
+	vertical-align:middle;
+}
+
+input.td_text
+{
+	width:180px;
+}
+
+select.td_select
+{
+	height:28px;
+	width:182px;
+}
+
+input.td_date
+{
+	width:85px;
+}
+
+/* 编辑页面控件CSS定义 */
+/*设置编辑框  input为readonly时的背景颜色，firefox、IE都支持*/
+input[readonly]{
+	background-color:#E8EEEE;
+	border: 1px solid #CCC;
+}
+
+table.Edit
+{
+	width:1060px;
+	border:0px #DDDDDD solid;
+	border-collapse: separate;
+	border-spacing: 1px;
+	margin:5px 5px;
+}
+
+table.Edit td.label
+{
+	width:150px;
+}
+
+table.Edit td.input
+{
+	width:350px;
+}
+
+table.Edit tbody .partinfo td
+{
+	height:36px;
+	border-bottom:1px solid #666;
+	font-size:16pt;
+}
+
+input.edit_text
+{
+	width:276px;
+	vertical-align:middle;
+}
+
+input.edit_number
+{
+	text-align:right;
+	width:276px;
+	vertical-align:middle;
+}
+
+input.edhalfw
+{
+	width:133px;
+}
+
+input.edit_date
+{
+	width:280px;
+	vertical-align:middle;
+}
+
+select.edit_select
+{
+	width:282px;
+	vertical-align:middle;
+}
+
+select.edhalfw
+{
+	width:138px;
+}
+
+/*表格编辑控件属性*/
+input.edit_text_list
+{
+	margin:-2px;
+	width:98%;
+}
+
+input.edit_number_list
+{
+	text-align:right;
+	margin:-2px;
+	width:98%;
+}
+
+select.edit_select_list
+{
+	margin:-2px;
+	width:98%;
+}
+/* 编辑页面控件CSS定义 结束 */
+
+/*
+下拉框和日期框CSS
+*/
+.combo {
+    border: 0px solid #A4BED4;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    height: 26px;
+	width:278px;
+}
+
+.combo-text {
+    border: 0 none;
+    height: 24px;
+    line-height: 24px;
+    padding: 0;
+}
+
+.combo-arrow {
+    background: url("../image/combo_arrow.gif") no-repeat scroll;
+    display: inline-block;
+    height: 20px;
+    opacity: 1;
+    overflow: hidden;
+	float:right;
+    vertical-align: top;
+    width: 18px;
+}
+
+.combo-date {
+    border: 1px solid #CCC;
+    height: 24px;
+    line-height: 24px;
+	width:262px;
+    vertical-align: middle;
+}
+
+.combo-filter span /* date-arrow */ 
+{
+    background: url("../image/datebox_arrow.png") no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 16px; 
+    overflow: hidden;
+    vertical-align: middle; 
+	margin-left: -6px;
+}
+
+.combo-filter
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DEDEDE;
+	border-radius: 3px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    height: 26px;
+	width:88px;
+}
+
+.combo-filter input
+{
+    border: 0px;
+    height: 24px;
+    line-height: 24px;
+	width:72px;
+}
+
+input.halfw
+{
+	width:86px;
+}
+
+select.halfw
+{
+	width:90px;
+}
+
+table.toolbar
+{
+	width:100%;
+	border:0px #DDDDDD solid;
+	border-collapse: separate;
+	border-spacing: 0px;
+	margin-top:0px;
+	margin-bottom: 5px;
+	background-color: #F5F5F6;
+}
+
+table.toolbar tr
+{
+	height:36px;
+}
+
+table.toolbar tr td
+{
+	padding-left:6px;
+}
+
+table.toolbar .title
+{
+	width:588px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+table.toolbar .nav
+{
+	width:160px;
+}
+
+table.toolbar .nav img
+{
+	border:0px;
+}
+
+table.toolbar .nav *
+{
+	vertical-align: middle;
+}
+
+/*date picker CSS Begin*/
+div.DatePicker
+{
+	background:#FFF;
+	width:236px;  
+	height:200px;  
+	text-align:center;  
+	position:absolute;  
+	z-index:8888;  
+	border:1px solid #6A84C8;
+	cursor:default;
+ }
+div.DatePicker table
+{
+	width:100%;
+	border:0px #DDDDDD solid;
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+div.DatePicker a
+{
+	height:20px;
+	color:#000;
+	padding-top:1px;
+	text-decoration:none;
+	display:block;
+	border:1px solid #FFF;
+}
+div.DatePicker tr
+{
+	height:20px;
+}
+div.DatePicker th
+{
+	width:26px;
+	border-top:1px solid #000000;
+	background:none repeat scroll 0 0 #CAD3E8;
+	border-bottom:1px solid #000000;
+}
+div.DatePicker .Holi
+{
+	color:#F00;
+}
+div.DatePicker .week
+{
+	color:#00A;
+	background:none repeat scroll 0 0 #CAD3E8;
+	cursor:pointer;
+}
+div.DatePicker .Sday
+{
+	height:20px;
+	padding-top:1px;
+	border:1px solid #000;
+	background:#FAA;
+}
+div.DatePicker a:hover
+{
+	height:20px;
+	padding-top:1px;
+	border:1px solid #000;
+	background:#FAA;
+}
+/*date picker CSS End*/
+
+/*Page A4打印*/
+div.A4
+{
+	min-height: 270mm;
+	width: 200mm;
+	background-color:#FFF;
+	border:0px solid #CCC; 
+	box-shadow: 1px 1px 1px #CCC;
+	padding:10mm 1mm 5mm 3mm;
+	float:left;
+	margin:2px;
+}
+
+table.Edit6c
+{
+	width:100%;
+	border:0px solid #DDDDDD;
+	border-collapse: separate;
+	border-spacing: 1px;
+	margin:auto;
+}
+
+table.Edit6c tr
+{
+	height:33px;
+}
+
+table.Edit6c td
+{
+	border:solid #F0E0E0; 
+	border-width:0px 0px 1px 0px; 
+	padding:2px 2px;
+}
+
+
+table.Edit6c td.td_lable
+{
+	width:100px;
+}
+
+table.Edit6c td.td_input
+{
+	width:198px;
+}
+
+table.Edit6c input
+{
+	width:186px;
+	height:25px;
+	margin:auto 1px;
+	vertical-align: middle;
+}
+
+table.Edit6c select
+{
+	width:195px;
+	height:30px;
+	margin:auto 1px;
+	vertical-align: middle;
+}
+
+table.Edit6c .rqd		/*required*/
+{
+	border:1px solid red;
+}
+
+table.Edit6c .date
+{
+	width:188px;
+	margin:auto 1px;
+}
+
+table.Edit6c .date input
+{
+	width:166px;
+	margin:auto 1px;
+}
+
+/**
+* 图片显示
+*/
+ul.images
+{
+	list-style:none;
+	margin:0px;
+	border-bottom:1px solid #CCC;
+}
+
+ul.images li
+{
+	width:120px;
+	height:150px;
+	float:left;
+	margin:6px;
+	border:0px solid #CCC;
+	vertical-align: middle;
+}
+
+ul.images li img
+{
+	width:120px;
+	height:120px;
+	border:0px;
+}
+
+ul.images li div
+{
+	width:120px;
+	text-align:center;
+	font-size:14px;
+}
+
+.open
+{
+	width:16px;
+	height:16px;
+	background:url(../image/view.gif) center no-repeat;
+}
+
+select
+{
+	border-radius: 3px;
+	border: 1px solid #DEDEDE;
+    vertical-align: middle; 
+}
+
+/**
+* 采用Table实现DIV的垂直居中
+*/
+table.center
+{
+	width:100%;
+	height:100%;
+}
+
+table.center div
+{
+	margin:0 auto;
+}
+/* 设置例子，需要设置 DIV的width\height属性
+<table class="center" style="border:1px solid;">
+<tr style="height:60px;">
+<td style="border:1px solid">
+</td>
+</tr>
+<tr>
+<td>
+<div style="background-color:blue;width:200px;height:300px;">DIV垂直居中</div>
+</td>
+</tr>
+<tr style="height:60px;">
+<td style="border:1px solid">
+</td>
+</tr>
+</table>
+*/
+
+/** 垂直居中结束 只需要设置*/
+
+div.hcenter
+{
+	margin: 0 auto;
+}
+
+/* 内容垂直居中 */
+.vt-center
+{
+	vertical-align: middle;	
+}
+/* 内容水平居中 */
+.ht-center
+{
+	text-align:center;
+}
+
+.splitter
+{
+	background-color:#8F88F0;
+}

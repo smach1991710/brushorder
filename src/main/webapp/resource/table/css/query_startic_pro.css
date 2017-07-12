@@ -1,0 +1,362 @@
+
+.tbEdit {
+	width:100%;
+	margin-top: 20;
+	text-align:center;
+}
+.tbEdit a{
+	border: 1px solid #d3d3d3;
+	background: #FFF;
+	border-radius: 3px;
+	min-width: 80px;
+	height: 25px;
+	line-height: 25px;
+	color: #666;
+	margin-right: 6px;
+	vertical-align: middle;
+	text-align: center;
+	width: auto;
+	display: inline-block;
+	text-decoration:none;
+	cursor:pointer;
+    cursor:hand;   //IE
+}
+.tbEdit a:hover{
+	background: #2d67c8;
+	color: #FFF;
+	text-decoration: none;
+	border: 1px solid #4875c2
+}
+.tbtree {
+	background: #FFF;
+	margin: 0px;
+}
+
+.tbopera {
+	height: 40px;
+}
+
+.tbopera .tbbtns {
+	float: left;
+	margin-top: 0;
+}
+.tbbtns {
+	float: left;
+	margin-top: 0;
+}
+
+.tbbtns .isDisplay {
+	border: 1px solid #d3d3d3;
+	background: #FFF;
+	border-radius: 3px;
+	min-width: 80px;
+	height: 25px;
+	line-height: 25px;
+	color: #666;
+	margin-right: 6px;
+	vertical-align: middle;
+	text-align: center;
+	width: auto;
+	display: inline-block;
+	cursor:pointer;
+    cursor:hand;   //IE
+}
+
+.tbbtns .isDisplay:hover {
+	background: #2d67c8;
+	color: #FFF;
+	text-decoration: none;
+	border: 1px solid #4875c2
+}
+.tbbtns .notDisplay {
+	cursor: default;
+	border: 1px solid #d3d3d3;
+	background: #EBEBE4;
+	border-radius: 3px;
+	min-width: 80px;
+	height: 25px;
+	line-height: 25px;
+	color: #666;
+	margin-right: 6px;
+	vertical-align: middle;
+	text-align: center;
+	width: auto;
+	display: inline-block;
+}
+.tbsearch {
+	float: right
+}
+
+.tbsearch input[type=text] {
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	border: solid 1px #d3d3d3;
+	background: #FFF;
+	border-right: none;
+	float: left;
+	font-size: 12px;
+	color: #999;
+	padding: 0 5px;
+	margin: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.tbsearch a {
+	width: auto;
+	padding: 0 8px;
+	height: 25px;
+	font-size: 12px;
+	display: block;
+	float: left;
+	border: solid 1px #2d67c8;
+	background: #2d67c8;
+	color: #FFF;
+	text-decoration: none;
+	line-height: 25px;
+	vertical-align: middle;
+}
+.tbtable{
+	
+}
+
+
+/* UQT鐏炵偞锟斤拷 */
+.uqt_detail{
+	text-align: center;
+}
+.uqt_detail table{
+	border: 1px solid #CCC;
+	border-width: 0 0 0 1px;
+	width:1311px;
+	table-layout: fixed;  /**閸欘亝婀佺�姘疅娴滃棜銆冮弽鑲╂畱鐢啫鐪粻妤佺《娑撶ixed閿涘奔绗呴棃顣歞閻ㄥ嫬鐣炬稊澶嬪閼冲�鎹ｆ担婊呮暏閵嗭拷  **/
+	background-color: transparent;
+}
+.uqt_detail table tr:hover{
+	background-color:#FAF2ED;
+}
+
+/*.uqt_detail table tr{
+	height:50px;
+}*/
+.uqt_detail table th {
+	font-size:11px;
+	border: 1px solid #CCC;
+	border-width: 2px 1px 1px 0;
+	border-color: #3C8DBC #CCC #CCC;
+	color:#fff;
+	background-color: #3C8DBC;
+	padding: 5px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.uqt_detail table td {
+	border: 1px solid #CCC;
+	border-width: 0 1px 1px 0;
+	line-height: 25px;
+	padding: 5px;
+}
+
+.uqt_detail table td.dis_dta .editOp {
+	margin-right: 8px;
+	color: #0716f2
+}
+.uqt_detail table td.dis_dta .editOp:hover {
+	margin-right: 8px;
+	color: #0716f2;
+	text-decoration:none;
+}
+.chi_name{
+	width:	95px;
+	text-align: left;
+	word-break:break-all;
+}
+.eng_name{
+	width:	140px;
+	text-align: center;
+	word-break:break-all;
+}
+.query_pro{
+	width:	140px;
+	text-align: center;
+	word-break:break-all;
+}
+.match_type{
+	width:	140px;
+	text-align: center;
+	word-break:break-all;
+}
+.dis_order{
+	width:	50px;
+	text-align: center;
+	word-break:break-all;
+}
+.dis_dta{
+	width:	65px;
+	text-align: center;
+	word-break:break-all;
+}
+.dis_hidden{
+	width:	0px;
+	text-align: center;
+	word-break:break-all;
+}
+
+.black_overlay {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	z-index: 1001;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	filter: alpha(opacity =   50);
+}
+
+.white_content {
+	display: none;
+	position: absolute;
+	left: 42%; /*FF IE7*/
+	width: 600px;
+	margin-left: -220px !important; /*FF IE7 鐚倝妤兼皳閳ь儩娴庛仮鍢庡ソ蔚鎾�優顭婇儩顐�儌顔欑煫顬ｂ檧锟界伝銇㈢硶鍋撴皳鑱ц墿 */
+	margin-top: -140px !important; /*FF IE7 鐚倝妤兼皳閳ь儩娴庛仮鍢庡ソ蔚鎾�優顭婇儩顐�敒顐堟簫顬ｂ檧锟界伝銇㈢硶鍋撴皳鑱ц墿*/
+	margin-top: 0px;
+	padding-top: 10px;
+	background: #FFF;
+	border-radius: 10px;
+	border: 1px solid #6E665A;
+	z-index: 9999;
+	_top: expression(eval(document.compatMode &&   document.compatMode ==
+		'CSS1Compat')?  documentElement.scrollTop+  (document.documentElement.clientHeight-this.offsetHeight
+		)/2: /*IE6*/ 
+ document.body.scrollTop+  (document.body.clientHeight-  this.clientHeight
+		)/2 ); /*IE5 IE5.5*/
+}
+
+.cmdb4_table_xj td {
+	font-size: 12px;
+	padding: 3px;
+	height:40px;
+}
+
+.cmdb4_table_xj td .xjinp {
+	width: 200px;
+	border: 1px solid #CCC;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle
+}
+
+.cmdb4_table_xj td.tdno1 {
+	text-align: right;
+	color: #808080;
+}
+
+.cmdb4_table_xj td .input_redstar {
+	color: #F00;
+	font-size: 14px;
+	font-family: verdana;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+.cmdb4_table_xj tr.errortd td .xjinp {
+	border-color: #F00;
+}
+
+.cmdb4_table_xj tr.errortd .tdtips {
+	color: #F00;
+	display: block
+}
+
+.cmdb4_table_xj tr td .tdtips {
+	display: none;
+	content: "&nbsp;"
+}
+.tbbtns {
+	margin-top: 20px;
+	text-align: center
+}
+
+.tbbtns a.newDia {
+	border: 1px solid #d3d3d3;
+	background: #FFF;
+	border-radius: 3px;
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	color: #666;
+	margin-right: 6px;
+	vertical-align: middle;
+	text-align: center;
+	display: inline-block;
+}
+
+.tbbtns a.newDia:hover {
+	background: #2d67c8;
+	color: #FFF;
+	border: 1px solid #4875c2
+}
+
+/**   閸掑棝銆�  **/
+.page_con{
+	border :0px;
+	
+}
+#div_pager{
+    clear:both;
+    height:30px;
+    line-height:30px;
+    margin-top:20px;
+    color:#999999;
+}
+
+#div_pager a{
+    padding:4px 8px;
+    margin:10px 3px;
+    font-size:12px;
+    border:1px solid #DFDFDF;
+    background-color:#FFF;
+    color:#9d9d9d;
+    text-decoration:none;
+}
+
+#div_pager span{
+    padding:4px 8px;
+    margin:10px 3px;
+    font-size:14px;
+}
+
+#div_pager span.disabled{
+    padding:4px 8px;
+    margin:10px 3px;
+    font-size:12px;
+    border:1px solid #DFDFDF;
+    background-color:#FFF;
+    color:#DFDFDF;
+}
+
+#div_pager span.curr{
+    padding:4px 8px;
+    margin:10px 3px;
+    font-size:12px;
+    border:1px solid #3C8DBC;
+    background-color:#3C8DBC;
+    color:#FFF;
+}
+
+#div_pager a:hover{
+    background-color:#FFEEE5;
+    border:1px solid #FF6600;
+}
+
+#div_pager span.normalsize{
+    font-size:12px;
+}
+

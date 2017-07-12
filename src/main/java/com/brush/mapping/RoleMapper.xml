@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.brush.dao.IRoleDao" >
+
+	<resultMap id="BaseResultMap" type="com.brush.pojo.Role" >
+    	<id column="id" property="id" jdbcType="INTEGER" />
+    	<result column="rolename" property="rolename" jdbcType="VARCHAR" />
+  	</resultMap>
+  
+	<sql id="Base_Column_List">
+    	id,rolename
+  	</sql>
+  
+  	<select id="getRoleById" parameterType="Integer" resultType="com.brush.pojo.Role" >   
+   		SELECT <include refid="Base_Column_List"/>
+   			FROM t_role
+   				WHERE id = #{id}
+   	</select>
+   	
+   	<select id="getAllRoleList" resultType="com.brush.pojo.Role" >   
+   		SELECT <include refid="Base_Column_List"/>
+   			FROM t_role
+   	</select>
+   	
+</mapper>
